@@ -69,11 +69,6 @@ monthly_earning=$((dailyWage * workingdaysPerMonth))
 # esac 
 
 
-<<<<<<< HEAD
-# Use Case 5
-monthly_earning=$((dailyWage * workingdaysPerMonth))
-echo "Monthly Earning for $workingdaysPerMonth is $(( monthly_earning ))"
-=======
 # # Use Case 5
 # monthly_earning=$((dailyWage * workingdaysPerMonth))
 # echo "Monthly Earning for $workingdaysPerMonth is $(( monthly_earning ))"
@@ -105,4 +100,3 @@ totalWage=$(($totalWorkingHours * $wagePerHour))
 echo "Total working days: $totalWorkingDays"
 echo "Total working hours: $totalWorkingHours"
 echo "Total wage for the month: $totalWage"
->>>>>>> UC6
