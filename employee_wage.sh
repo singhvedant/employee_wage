@@ -37,13 +37,6 @@ monthly_earning=$((dailyWage * workingdaysPerMonth))
 # echo "Part time employee wage for $partTimeHour hours is : $((partTimeSalary))"
 
 # # Use Case 4
-
-
-# # Use Case 5
-# monthly_earning=$((dailyWage * workingdaysPerMonth))
-# echo "Monthly Earning for $workingdaysPerMonth is $(( monthly_earning ))"
-
-
 # option="${1}" 
 # case ${option} in 
 #    -att) 
@@ -67,6 +60,13 @@ monthly_earning=$((dailyWage * workingdaysPerMonth))
 #         exit 1 
 #         ;; 
 # esac 
+
+# # Use Case 5
+# monthly_earning=$((dailyWage * workingdaysPerMonth))
+# echo "Monthly Earning for $workingdaysPerMonth is $(( monthly_earning ))"
+
+
+
 
 
 # # Use Case 5
