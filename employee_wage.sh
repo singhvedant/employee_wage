@@ -1,5 +1,16 @@
 echo "Welcome to employee wage computation program"
 
+
+# Variables
+wagePerHour=20
+maxHoursPerMonth=100
+maxWorkingDays=20
+totalWorkingHours=0
+totalWorkingDays=0
+
+# Constants
+fullDayHour=8
+partTimeHour=4
 isPresent=1
 checkAttendance=$((RANDOM%2))
 wagePerHour=20;
@@ -58,6 +69,40 @@ monthly_earning=$((dailyWage * workingdaysPerMonth))
 # esac 
 
 
+<<<<<<< HEAD
 # Use Case 5
 monthly_earning=$((dailyWage * workingdaysPerMonth))
 echo "Monthly Earning for $workingdaysPerMonth is $(( monthly_earning ))"
+=======
+# # Use Case 5
+# monthly_earning=$((dailyWage * workingdaysPerMonth))
+# echo "Monthly Earning for $workingdaysPerMonth is $(( monthly_earning ))"
+
+while [[ $totalWorkingHours -lt $maxHoursPerMonth ]] && [[ $totalWorkingDays -lt $maxWorkingDays ]]
+do
+    ((totalWorkingDays++))
+    checkAttendance=$((RANDOM%2)) # 0 for absent, 1 for full time, 2 for part time
+
+    case $checkAttendance in
+        1)
+            totalWorkingHours=$(($totalWorkingHours + $fullDayHour))
+            ;;
+        2)
+            totalWorkingHours=$(($totalWorkingHours + $partTimeHour))
+            ;;
+        *)
+            # Employee is absent
+            ;;
+    esac
+
+    if [ $totalWorkingHours -gt $maxHoursPerMonth ]
+    then
+        totalWorkingHours=$maxHoursPerMonth
+    fi
+done
+totalWage=$(($totalWorkingHours * $wagePerHour))
+
+echo "Total working days: $totalWorkingDays"
+echo "Total working hours: $totalWorkingHours"
+echo "Total wage for the month: $totalWage"
+>>>>>>> UC6
