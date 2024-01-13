@@ -5,6 +5,8 @@ checkAttendance=$((RANDOM%2))
 wagePerHour=20;
 fullDayHour=8;
 partTimeHour=8;
+workingdaysPerMonth=20;
+dailyWage=0
 
 # Use Case 1
 if [ isPresent -eq $checkAttendance ]; then
@@ -14,7 +16,15 @@ else
 fi
 
 # Use Case 2
-echo "Daily wage :\nWage_Per_Hour -> $wagePerHour\nWorking Hours -> $fullDayHour\nTotal Daily Wage = $(($wagePerHour * $fullDayHour))"
+dailyWage=$((wagePerHour * fullDayHour))
+echo "Daily wage with per hour wage of $wagePerHour, for Working $fullDayHour Hours is $dailyWage."
 
 # Use Case 3
-echo "Part time employee wage is : $((wagePerHour*partTimeHour))"
+echo "Part time employee wage for $partTimeHour hours is : $((wagePerHour*partTimeHour))"
+
+# Use Case 4
+
+
+# Use Case 5
+monthly_earning=$((dailyWage * workingdaysPerMonth))
+echo "Monthly Earning for $workingdaysPerMonth is $(( monthly_earning ))"
